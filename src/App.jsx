@@ -1,4 +1,4 @@
-import LoginPage from "./components/LoginPage";
+//import LoginPage from "./components/LoginPage";
 //import UseStateComponents from "./components/useStateComponents";
 //import Count from "./components/count.jsx"; 
 //import OnChangeDemo from "./components/OnChangeDemo"
@@ -8,9 +8,15 @@ import LoginPage from "./components/LoginPage";
 //import UpdateFunction from "./components/updaterFunction"
 //import UpdateOnObject from "./components/updaterOnObject"
 //import UpdaterArray from "./components/UpdaterFunctionOnArray"
+import CreateAccount from "./components/CreateAccount.jsx"
+import LoginPage from "./components/LoginPage.jsx"
+import {Route, Routes} from "react-router-dom"
 function App(){
   return(
-    <LoginPage/>
+    <Routes>
+      <Route path="/create-account" element={<CreateAccount />} />
+      <Route path="/login" element={<LoginPage />} />
+    </Routes>
   )
 }
 export default App

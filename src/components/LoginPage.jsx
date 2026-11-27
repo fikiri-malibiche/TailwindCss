@@ -1,27 +1,35 @@
+import { Link } from "react-router-dom";
 function LoginPage() {
   return (
     <>
-      <form action="">
-        <div className="bg-blue-200 flex-auto flex flex-col items-center justify-center h-screen gap-3 border-2 border-blue-300 rounded-3xl w-1/2 mx-auto">
+      <form action="" className="flex min-h-screen w-full items-center justify-center p-4">
+        <div className="box-border flex w-full min-w-0 max-w-md flex-col items-center justify-center gap-3 rounded-3xl border-2 border-blue-300 bg-blue-200 p-4 sm:p-8">
           <div>
-             <img src="src/assets/mzumbelogo1.jpg" alt="Mzumbe Logo" className="w-20 h-20 rounded-2xl "/>
-          </div>
-          <div>
-            <h1 className="text-3xl font-serif">WELCOME BACK</h1>
-          </div>
-          <div className="flex flex-col gap-2">
-            <label htmlFor="username" className="text-2xl font-serif mx-5">username</label>
-            <input type="text" id="username" placeholder="Enter username" className="bg-white  mx-5 rounded-xl text-xl p-2 outline-0 w-full"/>
-          </div>
-          <div className="flex flex-col gap-2">
-            <label htmlFor="password" className="text-2xl font-serif mx-5">password</label>
-            <input type="password" id="password" placeholder="Enter password"className="bg-white mx-5 rounded-xl text-xl p-2 outline-0 w-full"/>
+             <img src="src/assets/mzumbelogo1.jpg" alt="Mzumbe Logo" className="h-20 w-20 rounded-2xl"/>
           </div>
           <div>
-            <input type="submit" value={"Login"} className="bg-blue-900 text-2xl font-serif  text-white p-2 rounded-xl hover:bg-blue-400 transition-colors"  />
+            <h1 className="text-2xl font-serif">WELCOME BACK</h1>
+          </div>
+          <div className="flex w-full min-w-0 flex-col gap-2">
+            <label htmlFor="username" className="text-xl font-serif">Username</label>
+            <div className="relative w-full min-w-0">
+              <img src="src/assets/profile.png" alt="" className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2"/>
+              <input type="text" id="username" placeholder="Enter username" className="box-border w-full min-w-0 rounded-xl bg-white py-2 pl-12 pr-4 text-base outline-0 sm:text-lg"/>
+            </div>
+            
+          </div>
+          <div className="flex w-full min-w-0 flex-col gap-2">
+            <label htmlFor="password" className="text-xl font-serif">Password</label>
+            <div className="relative w-full min-w-0">
+              <img src="src/assets/padlock.png" alt="" className="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2"/>
+              <input type="password" id="password" placeholder="Enter password" className="box-border w-full min-w-0 rounded-xl bg-white py-2 pl-12 pr-4 text-base outline-0 sm:text-lg"/>
+            </div>
           </div>
           <div>
-            <p className="text-xl font-serif">Don't have an account? <a href="#" className="text-blue-900 font-bold">Create here</a></p>
+            <input type="submit" value={"Login"} className="rounded-xl bg-blue-900 p-2 text-2xl font-serif text-white transition-colors hover:bg-blue-400"/>
+          </div>
+          <div className="text-center">
+            <p className="text-base font-serif sm:text-lg">Don't have an account? <Link to="/create-account" className="font-bold text-blue-900">Create here</Link></p>
           </div>
         </div>
       </form>
